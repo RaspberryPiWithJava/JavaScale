@@ -64,6 +64,14 @@ public class Step {
     return new Step(e -> e.getScale().waitForStable(w -> Math.abs(w - ingredient.getWeight()) < margin));
   }
 
+  public static Step waitForAtLeast(Ingredient ingredient) {
+    return waitForAtLeast(ingredient, ingredient.getWeight() / 10);
+  }
+
+  public static Step waitForAtLeast(Ingredient ingredient, double margin) {
+    return new Step(e -> e.getScale().waitFor(w -> w > ingredient.getWeight() - margin / 2));
+  }
+
   public static Step countdown(int seconds) {
     return new Step(e -> e.getDisplay().countdown(seconds));
   }

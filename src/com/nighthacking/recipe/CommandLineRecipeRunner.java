@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author Stephen Chin <steveonjava@gmail.com>
  */
-public class CommandLineReciperRunner extends RecipeRunner {
+public class CommandLineRecipeRunner extends RecipeRunner {
 
   private final Display display = new CommandLineDisplay();
 
