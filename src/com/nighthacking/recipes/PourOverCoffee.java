@@ -23,7 +23,7 @@ public class PourOverCoffee implements Recipe {
 
   @Override
   public String name() {
-    return "Pout Over Coffee";
+    return "Pour Over Coffee";
   }
   
   @Override
