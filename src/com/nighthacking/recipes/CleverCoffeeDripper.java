@@ -14,7 +14,7 @@ public class CleverCoffeeDripper implements Recipe {
   private final Ingredient water;
 
   public CleverCoffeeDripper(double strength) {
-    beans = Ingredient.byWeight(CoffeeCalculator.grindWeight(strength, CUP_SIZE), "Graos de Cafe");
+    beans = Ingredient.byWeight(CoffeeCalculator.groundWeight(strength, CUP_SIZE), "Graos de Cafe");
     water = Ingredient.byWeight(CUP_SIZE, "Agua");
   }
 

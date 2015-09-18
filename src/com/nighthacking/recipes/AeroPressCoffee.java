@@ -16,7 +16,7 @@ public class AeroPressCoffee implements Recipe {
   private final Ingredient extraWater;
 
   public AeroPressCoffee(double strength) {
-    beans = Ingredient.byWeight(CoffeeCalculator.grindWeight(strength, CUP_SIZE), "Coffee Beans");
+    beans = Ingredient.byWeight(CoffeeCalculator.groundWeight(strength, CUP_SIZE), "Coffee Beans");
     brewingWater = Ingredient.byWeight(beans.getWeight() / BREW_RATIO, "Water");
     extraWater = Ingredient.byWeight(CUP_SIZE - brewingWater.getWeight(), "Water");
   }
@@ -43,7 +43,7 @@ public class AeroPressCoffee implements Recipe {
       Step.waitFor(beans),
       Step.say("Great, take your beans off the scale now."),
       Step.waitForClear(),
-      Step.say("Put your AeroPress filled with grinds on"),
+      Step.say("Put your AeroPress filled with grounds on"),
       Step.waitForContents(),
       Step.tare(),
       Step.say("Pour " + brewingWater + " at 200F"),

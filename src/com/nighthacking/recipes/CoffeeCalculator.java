@@ -10,13 +10,13 @@ public class CoffeeCalculator {
   public static final double STRONG = 62;
 
   /**
-   * Calculates the weight of grinds needed to reach a target coffee strength.
+   * Calculates the weight of grounds needed to reach a target coffee strength.
    *
    * @param strength Target strength in grams/liter
    * @param water Final water volume in grams (1g = 1ml)
-   * @return Amount of grinds needed in grams
+   * @return Amount of grounds needed in grams
    */
-  public static double grindWeight(double strength, double water) {
+  public static double groundWeight(double strength, double water) {
     return strength * (water / 1000);
   }
 }
